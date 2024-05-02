@@ -1,0 +1,6 @@
+Sachin Language
+vowels -> g
+------------
+
+dog -> dgg
+cat -> cgt
