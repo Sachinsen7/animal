@@ -20,11 +20,12 @@ def list_all_videos(videos):
     print("\n")
     print("*" * 50)
 
-def add_videos(video):
+def add_videos(videos):
     name = input("Enter video name: ")
-    time = input('Enter video time: ')
-    videos.append({'name': name, 'time': time})
+    time = input("Enter video time: ")
+    videos.append({"name": name, "time": time})
     save_data_helper(videos)
+
 
 
 def update_video(videos):
@@ -50,11 +51,7 @@ def delete_videos(videos):
     else:
         print("Inavalid index selected")
 
-
-
 def main():
-    
-
     videos = load_data()
 
     while True:
@@ -70,17 +67,21 @@ def main():
 
         match choice:
             case '1':
-                list_all_videos(videos)
-            case '2':
                 add_videos(videos)
-            case '3':
+            case '2':
                 update_video(videos)
-            case '4':
+            case '3':
                 delete_videos(videos)
+            case '4':
+                list_all_videos(videos)
             case '5':
+                list_all_videos(videos)
+            case '6':
                 break
             case _:
                 print("Invalid choice")
 
-    if __name__ == "__main":
-        main()
+# make sure this is at the bottom, no indentation
+if __name__ == "__main__":
+    main()
+
